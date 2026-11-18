@@ -40,7 +40,7 @@ its build pipeline, otherwise a future deployment may overwrite the entry.
 
 The current customer and seller APK files are published in [Android preview release](https://github.com/terrymooss/diggingdeal-seller-site/releases/tag/android-preview-2026-11-18).
 
-- Customer: **0.1.4** — EAS 2026-11-14 build, SHA256 `2400d65dcec37d5ca7d9dd55c1d400f4c70d1e747b110a7f6077f57fdf19669f`.
-- Seller streaming: **0.1.2** — verified APK package `com.pulsenall.diggingdeal.seller`, SHA256 `d40c3d7956662dfd1e1211ffcf784d819abe7c6ce720d71e369463527a41c648`.
+- Customer: **0.1.5** — EAS build `727ebe1f-f9d5-476a-af6e-40031e54b5bf`, SHA256 `b9e4077661e0b35f4203a364292706f3e9927990852952cc7fe82bfdcf8f25aa`.
+- Seller streaming: **0.1.4** — EAS build `566dac83-ecf4-42e9-a663-10f3e4136fe0`, SHA256 `3108d1511ccd7da82b12a065ccceebd7ecdb668240228d8788d6b13554e06eeb`.
 
 Both are preview installers, not a claim that all future source changes are included. Rebuild and update the release manifest as application features change. QR SVGs are hosted locally in `assets/app-qr-{customer,seller}.svg` (not via third-party QR renderers), and encode the stable production installation page on the seller domain. The seller web static assets were synced from the deployed Cloudflare Pages version on 2026-11-18 so the previous archived GitHub bundle does not overwrite the active login and broadcasts UI.

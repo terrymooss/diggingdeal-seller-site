@@ -4,18 +4,18 @@
   "apps": {
     "customer": {
       "name": "일반 고객용 앱",
-      "version": "0.1.4",
+      "version": "0.1.5",
       "releasedAt": "2026-11-18",
-      "apkUrl": "https://github.com/terrymooss/diggingdeal-seller-site/releases/download/android-preview-2026-11-18/diggingdeal-customer-0.1.4.apk",
-      "sha256": "2400d65dcec37d5ca7d9dd55c1d400f4c70d1e747b110a7f6077f57fdf19669f",
+      "apkUrl": "https://github.com/terrymooss/diggingdeal-seller-site/releases/download/android-preview-2026-11-18/diggingdeal-customer-0.1.5.apk",
+      "sha256": "b9e4077661e0b35f4203a364292706f3e9927990852952cc7fe82bfdcf8f25aa",
       "enabled": true
     },
     "seller": {
       "name": "셀러 방송 송출용 앱",
-      "version": "0.1.2",
+      "version": "0.1.4",
       "releasedAt": "2026-11-18",
-      "apkUrl": "https://github.com/terrymooss/diggingdeal-seller-site/releases/download/android-preview-2026-11-18/diggingdeal-seller-preview-20261114.apk",
-      "sha256": "d40c3d7956662dfd1e1211ffcf784d819abe7c6ce720d71e369463527a41c648",
+      "apkUrl": "https://github.com/terrymooss/diggingdeal-seller-site/releases/download/android-preview-2026-11-18/diggingdeal-seller-0.1.4.apk",
+      "sha256": "3108d1511ccd7da82b12a065ccceebd7ecdb668240228d8788d6b13554e06eeb",
       "enabled": true
     }
   }
