@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffda29">
+  <meta name="description" content="디깅딜 고객용 및 셀러 방송 송출용 Android 앱 설치 안내">
+  <title>디깅딜 앱 다운로드 | 셀러 센터</title>
+  <style>
+    :root{font-family:system-ui,-apple-system,"Noto Sans KR","Apple SD Gothic Neo",sans-serif;color:#181818;background:#f6f6f4;font-synthesis:none}
+    *{box-sizing:border-box}
+    body{margin:0}
+    a{color:inherit;text-decoration:none}
+    button,a{touch-action:manipulation}
+    .site-header{height:72px;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:0 max(20px,calc((100vw - 1030px)/2));background:#fff;border-bottom:1px solid #e9e9e6}
+    .brand{font-size:22px;font-weight:900;letter-spacing:-.06em}
+    .brand em{font-style:normal;background:#ffda29;border-radius:6px;padding:2px 5px}
+    .back{font-size:13px;font-weight:700;white-space:nowrap}
+    main{max-width:1060px;padding:56px 20px 64px;margin:0 auto}
+    .eyebrow{font-size:12px;font-weight:900;letter-spacing:.12em;color:#6a6500}
+    h1{font-size:clamp(28px,4.5vw,43px);line-height:1.23;letter-spacing:-.045em;margin:13px 0}
+    .intro{font-size:15px;line-height:1.8;color:#6c6c68;margin:0 0 30px}
+    .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+    .app-card{background:#fff;border:1px solid #e8e8e3;border-radius:24px;padding:26px;box-shadow:0 7px 28px #00000006;min-width:0}
+    .app-card:target,.app-card.selected{outline:2px solid #e3bf00;outline-offset:2px}
+    .card-head{display:flex;align-items:center;gap:14px}
+    .app-icon{font-size:29px;width:58px;height:58px;display:flex;align-items:center;justify-content:center;background:#fff6ba;border-radius:16px;flex-shrink:0}
+    h2{font-size:20px;letter-spacing:-.035em;margin:0 0 4px}
+    .desc{font-size:13px;color:#74746e;margin:0}
+    .status{margin-top:22px;border-radius:9px;background:#f3f3f0;color:#64645e;font-size:12px;font-weight:700;padding:9px 12px;display:inline-flex}
+    .status.ready{color:#255c31;background:#edf8ee}
+    .qr-wrap{height:260px;display:flex;align-items:center;justify-content:center;margin:16px 0;background:#fafafa;border:1px solid #eee;border-radius:18px}
+    .qr-wrap img{width:210px;height:210px;max-width:100%;object-fit:contain}
+    .qr-placeholder{text-align:center;color:#93938d;line-height:1.8;font-size:13px;padding:20px}
+    .meta{display:grid;grid-template-columns:75px minmax(0,1fr);column-gap:12px;row-gap:9px;color:#77776f;font-size:13px;margin:15px 0 21px}
+    .meta strong{color:#242424;overflow-wrap:anywhere;font-weight:650}
+    .buttons{display:flex;gap:10px;flex-wrap:wrap}
+    .primary,.secondary{border-radius:12px;padding:13px 17px;font-weight:800;font-size:13px;display:inline-flex;align-items:center;justify-content:center;cursor:pointer;border:1px solid #e0e0dc}
+    .primary{background:#ffda29;border-color:#ffda29;color:#171717;flex:1}
+    .primary.is-disabled{background:#eee;border-color:#eee;color:#8b8b85;cursor:not-allowed}
+    .secondary{background:#fff;color:#252525}
+    .secondary:disabled{opacity:.5;cursor:not-allowed}
+    .notes{font-size:12px;line-height:1.7;color:#787872;margin:16px 0 0}
+    .guide{margin-top:27px;background:#fff;border:1px solid #e9e9e5;border-radius:20px;padding:22px 25px;font-size:13px;color:#666;line-height:1.75}
+    .guide strong{color:#202020}
+    .guide p{margin:5px 0}
+    .platform-note{color:#9c461d}
+    .error{display:none;font-size:13px;color:#9c2828;margin:18px 0 0}
+    footer{text-align:center;color:#9a9a95;font-size:12px;padding:0 16px 32px}
+    @media(max-width:720px){main{padding:35px 16px 44px}.site-header{padding:0 16px}.grid{grid-template-columns:1fr}.app-card{padding:20px}.qr-wrap{height:245px}.brand{font-size:19px}}
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="./" aria-label="디깅딜 셀러 센터">DIGGING<em>DEAL</em></a>
+    <a class="back" href="./">셀러 센터로 돌아가기 ↗</a>
+  </header>
+  <main>
+    <div class="eyebrow">DIGGINGDEAL ANDROID APPS</div>
+    <h1>디깅딜 앱 다운로드</h1>
+    <p class="intro">스마트폰에서 설치 버튼을 누르거나, PC 화면의 QR코드를 Android 휴대폰으로 스캔하세요.<br>각 앱의 설치 링크와 QR코드는 최신 배포 정보가 확인되면 표시됩니다.</p>
+    <div class="grid">
+      <article class="app-card" id="app-customer" data-app="customer">
+        <div class="card-head"><div class="app-icon" aria-hidden="true">🛍️</div><div><h2>일반 고객용</h2><p class="desc">라이브 시청 · 단골 셀러 등록 · 상품 확인</p></div></div>
+        <span class="status" id="status-customer" aria-live="polite">배포 정보 확인 중</span>
+        <div class="qr-wrap" id="qr-customer"><div class="qr-placeholder">설치 QR코드 확인 중</div></div>
+        <dl class="meta"><dt>앱 버전</dt><dd><strong id="version-customer">-</strong></dd><dt>배포일</dt><dd><strong id="date-customer">-</strong></dd></dl>
+        <div class="buttons"><a class="primary is-disabled" id="link-customer" aria-disabled="true">설치 준비 중</a><button class="secondary" id="copy-customer" disabled type="button">링크 복사</button></div>
+        <p class="notes">방송 시청용 앱입니다. 셀러 방송 송출 기능은 포함되지 않습니다.</p>
+      </article>
+      <article class="app-card" id="app-seller" data-app="seller">
+        <div class="card-head"><div class="app-icon" aria-hidden="true">📡</div><div><h2>셀러 송출용</h2><p class="desc">카메라 방송 송출 · 라이브 방송 운영</p></div></div>
+        <span class="status" id="status-seller" aria-live="polite">배포 정보 확인 중</span>
+        <div class="qr-wrap" id="qr-seller"><div class="qr-placeholder">설치 QR코드 확인 중</div></div>
+        <dl class="meta"><dt>앱 버전</dt><dd><strong id="version-seller">-</strong></dd><dt>배포일</dt><dd><strong id="date-seller">-</strong></dd></dl>
+        <div class="buttons"><a class="primary is-disabled" id="link-seller" aria-disabled="true">설치 준비 중</a><button class="secondary" id="copy-seller" disabled type="button">링크 복사</button></div>
+        <p class="notes">승인된 셀러 계정으로 로그인해 방송을 송출할 수 있습니다.</p>
+      </article>
+    </div>
+    <p class="error" id="load-error" role="alert">배포 정보를 불러오지 못했습니다. 새로고침 후 다시 시도해 주세요.</p>
+    <section class="guide" aria-label="설치 안내">
+      <strong>설치 안내</strong>
+      <p>Android 기기에서 설치 파일을 다운로드하고, 필요한 경우 브라우저의 ‘이 출처의 앱 설치 허용’을 선택해 설치할 수 있습니다. 공식 디깅딜 배포 링크인지 확인하세요.</p>
+      <p class="platform-note" id="platform-note">iPhone(iOS)에는 APK를 설치할 수 없습니다. iOS용 앱은 별도 배포가 필요합니다.</p>
+      <p>QR코드는 디깅딜의 고정 설치 안내 주소로 연결되어, APK 버전이 업데이트돼도 QR코드를 다시 발급할 필요가 없습니다.</p>
+    </section>
+  </main>
+  <footer>© DIGGINGDEAL · Android APK 설치 안내</footer>
+  <script>
+  (function(){
+    "use strict";
+    var keys=["customer","seller"],params=new URLSearchParams(location.search),selected=params.get("app");
+    var isIOS=/iPad|iPhone|iPod/.test(navigator.userAgent);
+    if(isIOS)document.getElementById("platform-note").style.fontWeight="800";
+    if(keys.indexOf(selected)>=0){var active=document.getElementById("app-"+selected);active.classList.add("selected");}
+    function validUrl(raw){
+      if(typeof raw!=="string")return null;
+      try{var url=new URL(raw);return url.protocol==="https:"&&!url.username&&!url.password?url.href:null;}catch(e){return null;}
+    }
+    function update(key,app){
+      var status=document.getElementById("status-"+key);
+      var qr=document.getElementById("qr-"+key);
+      var link=document.getElementById("link-"+key);
+      var copy=document.getElementById("copy-"+key);
+      var download=app&&app.enabled===true?validUrl(app.apkUrl):null;
+      document.getElementById("version-"+key).textContent=app&&app.version||"미확인";
+      document.getElementById("date-"+key).textContent=app&&app.releasedAt||"미확인";
+      qr.replaceChildren();
+      if(!download){
+        status.textContent="검증된 설치 파일 준비 중";
+        var placeholder=document.createElement("div");placeholder.className="qr-placeholder";
+        placeholder.textContent="설치 가능한 APK가 등록되면 QR코드가 자동으로 표시됩니다.";
+        qr.appendChild(placeholder);
+        return;
+      }
+      status.textContent="Android 설치 가능";status.classList.add("ready");
+      var stable=new URL(location.pathname,location.origin);
+      stable.searchParams.set("app",key);
+      var img=document.createElement("img");
+      img.alt=(key==="customer"?"일반 고객용":"셀러 송출용")+" 앱 설치 페이지 QR코드";
+      img.loading="lazy";
+      img.width=210;img.height=210;
+      img.src="https://api.qrserver.com/v1/create-qr-code/?size=230x230&margin=10&format=svg&data="+encodeURIComponent(stable.href);
+      img.onerror=function(){qr.textContent="QR 이미지를 표시하지 못했습니다. 아래 설치 버튼을 사용해 주세요.";};
+      qr.appendChild(img);
+      link.href=download;link.target="_blank";link.rel="noopener noreferrer";
+      link.classList.remove("is-disabled");link.removeAttribute("aria-disabled");link.textContent="APK 설치 페이지 열기";
+      copy.disabled=false;copy.addEventListener("click",async function(){
+        try{await navigator.clipboard.writeText(stable.href);copy.textContent="복사 완료";}
+        catch(e){copy.textContent="링크 복사 실패";}
+      });
+    }
+    fetch("./app-builds.json",{cache:"no-store"}).then(function(r){if(!r.ok)throw new Error("HTTP "+r.status);return r.json();})
+      .then(function(data){keys.forEach(function(key){update(key,data&&data.apps&&data.apps[key]);});})
+      .catch(function(){keys.forEach(function(key){update(key,null);});document.getElementById("load-error").style.display="block";});
+  })();
+  </script>
+</body>
+</html>
