@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": null,
+  "apps": {
+    "customer": {
+      "name": "일반 고객용 앱",
+      "version": null,
+      "releasedAt": null,
+      "apkUrl": null,
+      "sha256": null,
+      "enabled": false
+    },
+    "seller": {
+      "name": "셀러 방송 송출용 앱",
+      "version": null,
+      "releasedAt": null,
+      "apkUrl": null,
+      "sha256": null,
+      "enabled": false
+    }
+  }
+}
