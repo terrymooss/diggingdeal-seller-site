@@ -130,7 +130,7 @@
         catch(e){copy.textContent="링크 복사 실패";}
       });
     }
-    fetch("./app-builds.json",{cache:"no-store"}).then(function(r){if(!r.ok)throw new Error("HTTP "+r.status);return r.json();})
+    fetch("./app-builds.json?check="+Date.now(),{cache:"no-store"}).then(function(r){if(!r.ok)throw new Error("HTTP "+r.status);return r.json();})
       .then(function(data){keys.forEach(function(key){update(key,data&&data.apps&&data.apps[key]);});})
       .catch(function(){keys.forEach(function(key){update(key,null);});document.getElementById("load-error").style.display="block";});
   })();
