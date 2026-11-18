@@ -114,17 +114,17 @@
         return;
       }
       status.textContent="Android 설치 가능";status.classList.add("ready");
-      var stable=new URL(location.pathname,location.origin);
+      var stable=new URL("/apps.html","https://seller.diggingdeal.kro.kr");
       stable.searchParams.set("app",key);
       var img=document.createElement("img");
       img.alt=(key==="customer"?"일반 고객용":"셀러 송출용")+" 앱 설치 페이지 QR코드";
       img.loading="lazy";
       img.width=210;img.height=210;
-      img.src="https://api.qrserver.com/v1/create-qr-code/?size=230x230&margin=10&format=svg&data="+encodeURIComponent(stable.href);
+      img.src="./assets/app-qr-"+key+".svg";
       img.onerror=function(){qr.textContent="QR 이미지를 표시하지 못했습니다. 아래 설치 버튼을 사용해 주세요.";};
       qr.appendChild(img);
       link.href=download;link.target="_blank";link.rel="noopener noreferrer";
-      link.classList.remove("is-disabled");link.removeAttribute("aria-disabled");link.textContent="APK 설치 페이지 열기";
+      link.classList.remove("is-disabled");link.removeAttribute("aria-disabled");link.textContent="APK 다운로드";
       copy.disabled=false;copy.addEventListener("click",async function(){
         try{await navigator.clipboard.writeText(stable.href);copy.textContent="복사 완료";}
         catch(e){copy.textContent="링크 복사 실패";}
